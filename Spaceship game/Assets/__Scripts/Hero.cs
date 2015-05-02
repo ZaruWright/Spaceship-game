@@ -6,27 +6,27 @@ public class Hero : MonoBehaviour {
 
 	// For Debugging
 	public bool debug = false;
-
 	// This fields control de movement of the ship
 	public float speed = 30;
 	public float rollMult = -45;
 	public float pitchMult = 30;
-
 	//Ship status information
 	[SerializeField]
 	private float _shieldLevel = 1;
-
 	// Restart delay
 	public float gameRestartDelay = 2f;
-
 	public bool ____________________________;
-
 	public Bounds bounds;
+	// Declare a new delegate type WeaponFireDelegate
+	public delegate void WeaponFireDelegate();
+	// Create a WeaponFireDelegate field named fireDelegate.
+	public WeaponFireDelegate fireDelegate;
 
 	// Before the game starts
 	void Awake(){
 		S = this;
 		bounds = Utils.CombineBoundsOfChildren (this.gameObject);
+
 	}
 
 	// Update is called once per frame
@@ -41,9 +41,9 @@ public class Hero : MonoBehaviour {
 		pos.y += yAxis * speed * Time.deltaTime;
 		transform.position = pos;
 		if (debug) {
-			Debug.Log ("xAxis" + xAxis.ToString ());
-			Debug.Log ("pos.x" + pos.x.ToString ());
-			Debug.Log ("pos.y" + pos.y.ToString ());
+			Debug.Log ("xAxis " + xAxis.ToString ());
+			Debug.Log ("pos.x " + pos.x.ToString ());
+			Debug.Log ("pos.y " + pos.y.ToString ());
 		}
 		// Change the bound center position
 		bounds.center = transform.position;
@@ -56,6 +56,17 @@ public class Hero : MonoBehaviour {
 
 		//Rotate the ship to make it feel more dynamic
 		transform.rotation = Quaternion.Euler (yAxis*pitchMult, xAxis*rollMult, 0);
+
+		// Use the fireDelegate to fire Weapons
+		// First, make sure the Axis("Jump") button is pressed
+		// Then ensure that fireDelegate isn't null to avoid an error
+		if (debug) {
+			Debug.Log("Jump " + Input.GetAxis("Jump").ToString());
+			Debug.Log("fireDelegate" + fireDelegate.ToString());
+		}
+		if (Input.GetAxis("Jump") == 1 && fireDelegate != null) { 
+			fireDelegate();
+		}
 
 	}
 
