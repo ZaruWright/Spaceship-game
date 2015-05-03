@@ -1,18 +1,27 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\__Scripts\Enemy.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\__Scripts\Parallax.cs">
     <Files>
-      <File FileName="Assets\__Scripts\Enemy.cs" Line="75" Column="23" />
-      <File FileName="Assets\__Scripts\Hero.cs" Line="76" Column="9" />
+      <File FileName="Assets\__Scripts\Enemy.cs" Line="80" Column="1" />
+      <File FileName="Assets\__Scripts\Hero.cs" Line="93" Column="28" />
       <File FileName="Assets\__Scripts\Shield.cs" Line="13" Column="1" />
-      <File FileName="Assets\__Scripts\Utils.cs" Line="23" Column="17" />
-      <File FileName="Assets\__Scripts\Main.cs" Line="48" Column="53" />
-      <File FileName="Assets\__Scripts\Weapon.cs" Line="90" Column="10" />
+      <File FileName="Assets\__Scripts\Utils.cs" Line="141" Column="32" />
+      <File FileName="Assets\__Scripts\Main.cs" Line="90" Column="54" />
+      <File FileName="Assets\__Scripts\Weapon.cs" Line="45" Column="12" />
       <File FileName="Assets\__Scripts\Projectile.cs" Line="5" Column="13" />
+      <File FileName="Assets\__Scripts\PowerUp.cs" Line="4" Column="21" />
+      <File FileName="Assets\__Scripts\Enemy_1.cs" Line="27" Column="61" />
+      <File FileName="Assets\__Scripts\Enemy_2.cs" Line="3" Column="1" />
+      <File FileName="Assets\__Scripts\Enemy_3.cs" Line="24" Column="50" />
+      <File FileName="Assets\__Scripts\Enemy_4.cs" Line="150" Column="32" />
+      <File FileName="Assets\__Scripts\Parallax.cs" Line="15" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="C:\Users\ZaruWright\GitHub\Spaceship-game\Spaceship game\Assets\__Scripts\Main.cs" line="84" />
+      <Breakpoint enabled="false" file="C:\Users\ZaruWright\GitHub\Spaceship-game\Spaceship game\Assets\__Scripts\Hero.cs" line="85" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

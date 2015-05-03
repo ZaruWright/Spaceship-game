@@ -80,10 +80,15 @@ public class Utils : MonoBehaviour {
 		// Convert these to world coordinates
 		Vector3 boundTLN = cam.ScreenToWorldPoint( topLeft );
 		Vector3 boundBRF = cam.ScreenToWorldPoint( bottomRight );
+		Debug.Log ("boundTLN " + boundTLN.ToString());
+		Debug.Log ("boundBRF " + boundBRF.ToString());
 
 		// Adjust their zs to be at the near and far Camera clipping planes
 		boundTLN.z += cam.nearClipPlane;
 		boundBRF.z += cam.farClipPlane;
+		Debug.Log ("boundTLN " + boundTLN.ToString());
+		Debug.Log ("boundBRF " + boundBRF.ToString());
+
 
 		// Find the center of the Bounds
 		Vector3 center = (boundTLN + boundBRF)/2f;
@@ -100,8 +105,7 @@ public class Utils : MonoBehaviour {
 	}
 
 	// Checks to see whether Bounds lilB are within Bounds bigB
-	public static Vector3 BoundsInBoundsCheck( Bounds bigB, Bounds lilB,
-	                                          BoundsTest test = BoundsTest.onScreen ) {
+	public static Vector3 BoundsInBoundsCheck( Bounds bigB, Bounds lilB, BoundsTest test = BoundsTest.onScreen ) {
 		// The behavior of this function is different based on the BoundsTest
 		// that has been selected.
 		// Get the center of lilB
