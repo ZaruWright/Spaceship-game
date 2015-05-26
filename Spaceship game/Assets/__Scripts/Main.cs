@@ -4,6 +4,15 @@ using System.Collections.Generic;
 
 public class Main : MonoBehaviour {
 
+	[System.Serializable]
+	public class Horde {
+		public GameObject[] enemies;
+		public int[] amountEnemies;
+		public float[] timeToWait;
+	}
+
+
+
 	static public Main S;
 	static public Dictionary<WeaponType, WeaponDefinition> W_DEFS;
 	public GameObject[] prefabEnemies;
@@ -18,6 +27,13 @@ public class Main : MonoBehaviour {
 	public bool ________________;
 	public float enemySpawnRate; // Delay between Enemy spawns
 	public WeaponType[] activeWeaponTypes;
+	public bool _________________;
+	public Horde horde;
+	private bool moreEnemies = true;
+	private int iterator;
+	private float time;
+	public int level;
+	public bool endGame;
 
 	void Awake() {
 		S = this;
@@ -26,7 +42,7 @@ public class Main : MonoBehaviour {
 		// 0.5 enemies/second = enemySpawnRate of 2
 		enemySpawnRate = 1f/enemySpawnPerSecond;
 		// Invoke call SpawnEnemy() once after a 2 second delay
-		Invoke( "SpawnEnemy", enemySpawnRate );
+		InvokeRepeating( "SpawnEnemy", enemySpawnRate, 1 );
 
 		// A generic Dictionary with WeaponType as the key
 		W_DEFS = new Dictionary<WeaponType, WeaponDefinition>();
@@ -48,25 +64,42 @@ public class Main : MonoBehaviour {
 	}
 
 	void Start() {
+
 		activeWeaponTypes = new WeaponType[weaponDefinitions.Length];
 		for ( int i=0; i<weaponDefinitions.Length; i++ ) {
 			activeWeaponTypes[i] = weaponDefinitions[i].type;
 		}
+		StartCoroutine (popUp("Level" + level.ToString(), 1));
+	}
+
+	public IEnumerator popUp(string text, int time){
+		this.GetComponent<Pop_Up>().Create (text,time);
+		yield return 0;
 	}
 
 	public void SpawnEnemy() {
-		// Pick a random Enemy prefab to instantiate
-		int ndx = Random.Range(0, prefabEnemies.Length);
-		GameObject go = Instantiate( prefabEnemies[ ndx ] ) as GameObject;
-		// Position the Enemy above the screen with a random x position
-		Vector3 pos = Vector3.zero;
-		float xMin = Utils.camBounds.min.x+enemySpawnPadding;
-		float xMax = Utils.camBounds.max.x-enemySpawnPadding;
-		pos.x = Random.Range( xMin, xMax );
-		pos.y = Utils.camBounds.max.y + enemySpawnPadding;
-		go.transform.position = pos;
-		// Call SpawnEnemy() again in a couple of seconds
-		Invoke( "SpawnEnemy", enemySpawnRate ); // 3
+		if (iterator == horde.enemies.Length) { // If finish the horde, cancel the invoke repeating
+			CancelInvoke("Spawn");
+			moreEnemies = false;
+			return;
+		}
+		
+		if (time <= 0) { // Create a enemy 
+			// Position the Enemy above the screen with a random x position
+			Vector3 pos = Vector3.zero;
+			float xMin = Utils.camBounds.min.x+enemySpawnPadding;
+			float xMax = Utils.camBounds.max.x-enemySpawnPadding;
+			pos.x = Random.Range( xMin, xMax );
+			pos.y = Utils.camBounds.max.y + enemySpawnPadding;
+
+			Instantiate (horde.enemies[iterator], pos, horde.enemies[iterator].GetComponent<Transform>().rotation);
+			time = horde.timeToWait[iterator];
+			horde.amountEnemies[iterator]--;
+		}
+		
+		if (horde.amountEnemies[iterator] == 0){ // if we haven't got more enemies, go to the next type of enemy 
+			iterator++;
+		}
 	}
 
 	public void DelayedRestart( float delay ) {
@@ -96,6 +129,29 @@ public class Main : MonoBehaviour {
 			pu.SetType( puType );
 			// Set it to the position of the destroyed ship
 			pu.transform.position = e.transform.position;
+		}
+	}
+
+	void Update (){
+		if (time > 0){
+			time -= Time.deltaTime;
+		}
+		GameObject[] go = GameObject.FindGameObjectsWithTag ("Enemy");
+
+		if (!moreEnemies && go.Length == 0) {
+			Invoke("goNextLevel", 1.5f);
+		}
+	}
+
+	void goNextLevel(){
+		if (endGame) {
+			GetComponent<Change_Scene>().ChangeToScene(1); //Credits
+		} 
+		else {
+			// Level 1 --> 2
+			// Level 2 --> 3
+			// By this the number of the next scene is this.level+2
+			GetComponent<Change_Scene>().ChangeToScene(level+2);
 		}
 	}
 

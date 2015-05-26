@@ -160,9 +160,10 @@ public class Hero : MonoBehaviour {
 			// If the shield is going to be set to less than zero
 			if (value < 0) {
 				Destroy(this.gameObject);
-				// Tell Main.S to restart the game after a delay
-				Main.S.DelayedRestart( gameRestartDelay );
-			}
+				StartCoroutine(Main.S.popUp("You lose", 1));
+				Main.S.GetComponent<Change_Scene>().Invoke("ChangeToLevel0",1.0f);
+
+			} 
 		}
 	}
 

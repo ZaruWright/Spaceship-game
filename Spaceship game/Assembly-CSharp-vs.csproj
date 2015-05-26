@@ -46,6 +46,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_UI\Scripts\ActiveStateToggler.cs" />
+     <Compile Include="Assets\_UI\Scripts\ApplicationManager.cs" />
+     <Compile Include="Assets\_UI\Scripts\ChangeColor.cs" />
+     <Compile Include="Assets\_UI\Scripts\DragMe.cs" />
+     <Compile Include="Assets\_UI\Scripts\DragPanel.cs" />
+     <Compile Include="Assets\_UI\Scripts\DropMe.cs" />
+     <Compile Include="Assets\_UI\Scripts\PanelManager.cs" />
+     <Compile Include="Assets\_UI\Scripts\ResizePanel.cs" />
+     <Compile Include="Assets\_UI\Scripts\ScrollDetailTexture.cs" />
+     <Compile Include="Assets\_UI\Scripts\ShowSliderValue.cs" />
+     <Compile Include="Assets\_UI\Scripts\TiltWindow.cs" />
+     <Compile Include="Assets\__Scripts\Change_Scene.cs" />
      <Compile Include="Assets\__Scripts\Enemy.cs" />
      <Compile Include="Assets\__Scripts\Enemy_1.cs" />
      <Compile Include="Assets\__Scripts\Enemy_2.cs" />
@@ -54,11 +66,15 @@
      <Compile Include="Assets\__Scripts\Hero.cs" />
      <Compile Include="Assets\__Scripts\Main.cs" />
      <Compile Include="Assets\__Scripts\Parallax.cs" />
+     <Compile Include="Assets\__Scripts\Pop_Up.cs" />
      <Compile Include="Assets\__Scripts\PowerUp.cs" />
      <Compile Include="Assets\__Scripts\Projectile.cs" />
      <Compile Include="Assets\__Scripts\Shield.cs" />
      <Compile Include="Assets\__Scripts\Utils.cs" />
      <Compile Include="Assets\__Scripts\Weapon.cs" />
+     <None Include="Assets\_UI\Fonts\Jupiter\LICENSE.txt" />
+     <None Include="Assets\_UI\Textures and Sprites\SF UI\Background\LICENSE.txt" />
+     <None Include="Assets\_UI\Materials\UI-Default-No-Alpha.shader" />
      <None Include="Assets\_Materials\UnlitAlpha.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.4/UnityEngine.UI.dll</HintPath>
