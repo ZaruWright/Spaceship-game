@@ -1,19 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\__Scripts\Main.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\dvi-31-05-2015\Zdefense\IsometricDefense1\Assets\Scripts\ClickTower.cs">
     <Files>
-      <File FileName="Assets\__Scripts\Enemy.cs" Line="1" Column="1" />
-      <File FileName="Assets\__Scripts\Main.cs" Line="147" Column="17" />
-      <File FileName="Assets\__Scripts\Change_Scene.cs" Line="8" Column="3" />
-      <File FileName="Assets\__Scripts\Pop_Up.cs" Line="17" Column="1" />
-      <File FileName="Assets\__Scripts\Hero.cs" Line="164" Column="71" />
-      <File FileName="Assets\_UI\Scripts\PanelManager.cs" Line="97" Column="1" />
+      <File FileName="..\..\..\dvi-31-05-2015\Zdefense\IsometricDefense1\Assets\Scripts\PopUp.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\dvi-31-05-2015\Zdefense\IsometricDefense1\Assets\Scripts\ClickTower.cs" Line="16" Column="3" />
+      <File FileName="..\..\..\dvi-31-05-2015\Zdefense\IsometricDefense1\Assets\Scripts\ChangeScene.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\dvi-31-05-2015\Zdefense\IsometricDefense1\Assets\Scripts\setMoney.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\dvi-31-05-2015\Zdefense\IsometricDefense1\Assets\Scripts\Road.cs" Line="74" Column="76" />
+      <File FileName="..\..\..\dvi-31-05-2015\Zdefense\IsometricDefense1\Assets\Scripts\UnitySingletonMenu.cs" Line="13" Column="2" />
+      <File FileName="..\..\..\dvi-31-05-2015\Zdefense\IsometricDefense1\Assets\Scripts\Tower.cs" Line="55" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="C:\Users\ZaruWright\GitHub\Spaceship-game\Spaceship game\Assets\__Scripts\Pop_Up.cs" line="17" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
