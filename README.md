@@ -23,4 +23,7 @@ Finally, The enemies go out by hordes, that is to say, you can specify the order
 And that it's all! I want to continue working in Unity. Now I haven't got so much time to do thing by my own, but
 in summer in think that I do a good project.
 
+If you can play it, you can do it on the next link:
+	http://zaruwright.github.io/Spaceship-game/
+
 See you soon! Happy Coding! 
