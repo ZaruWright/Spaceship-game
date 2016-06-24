@@ -36,7 +36,7 @@ public class Enemy_4 : Enemy {
 			t = transform.Find(prt.name);
 			if (t != null) {
 				prt.go = t.gameObject;
-				prt.mat = prt.go.renderer.material;
+				prt.mat = prt.go.GetComponent<Renderer>().material;
 			}
 		}
 	}

@@ -1,9 +1,9 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{31574BF4-0994-792E-7CC3-D5091015CEBB}") = "Spaceship game", "Assembly-CSharp.csproj", "{BB9C09B4-C671-76E6-9D7D-B8DF0623D3D1}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaceship game.CSharp", "Spaceship game.CSharp.csproj", "{3BCA9C9C-4EBE-5FEC-4C74-A8E4810E10E3}"
 EndProject
-Project("{31574BF4-0994-792E-7CC3-D5091015CEBB}") = "Spaceship game", "Assembly-CSharp-Editor.csproj", "{2AF732B8-1A05-E18C-8258-2D53B408A071}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spaceship game.CSharp.Editor", "Spaceship game.CSharp.Editor.csproj", "{41D224E4-AC77-3A49-664E-42F34D8F91D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,36 +11,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BB9C09B4-C671-76E6-9D7D-B8DF0623D3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB9C09B4-C671-76E6-9D7D-B8DF0623D3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB9C09B4-C671-76E6-9D7D-B8DF0623D3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB9C09B4-C671-76E6-9D7D-B8DF0623D3D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2AF732B8-1A05-E18C-8258-2D53B408A071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2AF732B8-1A05-E18C-8258-2D53B408A071}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2AF732B8-1A05-E18C-8258-2D53B408A071}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2AF732B8-1A05-E18C-8258-2D53B408A071}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BCA9C9C-4EBE-5FEC-4C74-A8E4810E10E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BCA9C9C-4EBE-5FEC-4C74-A8E4810E10E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BCA9C9C-4EBE-5FEC-4C74-A8E4810E10E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BCA9C9C-4EBE-5FEC-4C74-A8E4810E10E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41D224E4-AC77-3A49-664E-42F34D8F91D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41D224E4-AC77-3A49-664E-42F34D8F91D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41D224E4-AC77-3A49-664E-42F34D8F91D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41D224E4-AC77-3A49-664E-42F34D8F91D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																															GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
-		Policies = $0
-		$0.TextStylePolicy = $1
-		$1.inheritsSet = null
-		$1.scope = text/x-csharp
-		$0.CSharpFormattingPolicy = $2
-		$2.inheritsSet = Mono
-		$2.inheritsScope = text/x-csharp
-		$2.scope = text/x-csharp
-		$0.TextStylePolicy = $3
-		$3.FileWidth = 120
-		$3.TabWidth = 4
-		$3.IndentWidth = 4
-		$3.EolMarker = Unix
-		$3.inheritsSet = Mono
-		$3.inheritsScope = text/plain
-		$3.scope = text/plain
-	EndGlobalSection
-
 EndGlobal
